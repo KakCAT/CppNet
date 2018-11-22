@@ -302,6 +302,10 @@ public class LexerSource : Source {
 			d = read();
 		}
 		unread(d);
+
+		// for some reason CppNet does not track well CR after a cppcomment, so I increment the line here as a patch.
+		line++;
+
         return new Token(Token.CPPCOMMENT, text.ToString());
 	}
 
