@@ -556,7 +556,7 @@ public class Preprocessor : IDisposable {
 					/* We actually want 'did the nested source
 					 * contain a newline token', which isNumbered()
 					 * approximates. This is not perfect, but works. */
-					return line_token(t.getLine() + 1, t.getName(), " 2");
+					return line_token(t.getLine() , t.getName(), " 2");
 				}
 				continue;
 			}
